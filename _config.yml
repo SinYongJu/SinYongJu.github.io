@@ -1,6 +1,6 @@
 # Jekyll configuration
 
-name: sin yongju devdoggy
+name: Sin yongju Devdoggy
 description: Welcome to Xixia！
 
 # url is currently only used only for the RSS feed in feed.xml
@@ -18,7 +18,7 @@ date_format:
   categories: "%b, %Y"
   tag: "%b, %Y"
 # Language
-lan: "kr"
+lan: "en"
 
 paginate: 10
 
