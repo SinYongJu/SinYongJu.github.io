@@ -2,8 +2,8 @@
 
 title: Krishna
 
-baseurl: /krishna
-sass: 
+baseurl: /
+sass:
     style: compressed
 
 
@@ -14,5 +14,5 @@ analytics: UA-83979019-1
 exclude:
 - README.md
 
-include: 
+include:
 - _pages
