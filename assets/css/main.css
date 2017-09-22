@@ -860,10 +860,11 @@ pre code {
   width: 240px;
   height: 100%;
   padding: 20px 10px;
-  background-color: #ffffff;
+  background-color: #78de9a;
 }
 
 .about {
+  background-color: #509ea9;
   margin: 0 0 40px;
   text-align: center;
 }
