@@ -175,7 +175,7 @@ pre {
     @include media-query($on-palm) {
         left: 165px;
     }
-	a {
+	a,div {
 		display: block;
 		color: white;
         font-size: 26px;
