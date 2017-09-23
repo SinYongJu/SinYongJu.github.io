@@ -26,7 +26,7 @@
   <div class="links">
       <a href="//"><i class="fa fa-home"></i>&nbsp;Home</a>
       <a href="//about/"><i class="fa fa-user"></i>&nbsp;About</a>
-      <div class="on" onclick="popupwin()"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</div>
+      <div class="on"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</div>
       <!-- href="//archive/" -->
       <a href="//contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a>
       <a href="https://github.com/SinYongJu.github.io"><i class="fa fa-code-fork"></i>&nbsp;Project</a>
@@ -119,10 +119,8 @@ s.setAttribute('data-timestamp', +new Date());
 <script type="text/javascript">
   (function(){
     console.log('호우')
-    $(document).on('ready',function(){
-      function popupwin(){
+    $(document).on('click',function(){
         console.log('this','요기!')
-      }
     })
 
   })()
