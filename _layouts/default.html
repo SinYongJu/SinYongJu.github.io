@@ -15,7 +15,7 @@
     .links .on:hover{
       cursor:pointer;
     }
-    .hideul{
+    .hideUl{
       display: none;
     }
 
@@ -30,13 +30,13 @@
   <div class="links">
       <a href="{{site.baseurl}}/"><i class="fa fa-home"></i>&nbsp;Home</a>
       <a href="{{site.baseurl}}/about/"><i class="fa fa-user"></i>&nbsp;About</a>
-      <div class="on"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</div>
-        <ul class='hideul'>
+      <a class="on" href="{{site.baseurl}}/archive/"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</a>
+        <ul class='hideUl'>
           <li></li>
           <li></li>
           <li></li>
         </ul>
-      <!-- href="{{site.baseurl}}/archive/" -->
+      <!--  -->
       <a href="{{site.baseurl}}/contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a>
       <a href="https://github.com/SinYongJu.github.io"><i class="fa fa-code-fork"></i>&nbsp;Project</a>
   </div>
