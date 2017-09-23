@@ -11,7 +11,11 @@
   <link rel="stylesheet" href="//css/syntax-highlighter.css">
   
   <link href="//fonts.googleapis.com/css?family=Space+Mono|Work+Sans:700" rel="stylesheet">
-
+  <style media="screen">
+    .links .on:hover{
+      cursor:pointer;
+    }
+  </style>
 </head>
 <body>
 
@@ -22,7 +26,8 @@
   <div class="links">
       <a href="//"><i class="fa fa-home"></i>&nbsp;Home</a>
       <a href="//about/"><i class="fa fa-user"></i>&nbsp;About</a>
-      <a href="//archive/"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</a>
+      <div class="on" onclick="popupwin()"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</div>
+      <!-- href="//archive/" -->
       <a href="//contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a>
       <a href="https://github.com/SinYongJu.github.io"><i class="fa fa-code-fork"></i>&nbsp;Project</a>
   </div>
@@ -120,7 +125,7 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
-    
+  
   <script id="dsq-count-scr" src="//sindevdoggy-disqus-com.disqus.com/count.js" async></script>
 </div>
   <!-- Calling Fontawesome at the end to avoid delay in loading -->
@@ -136,7 +141,14 @@ s.setAttribute('data-timestamp', +new Date());
   ga('send', 'pageview');
 
 </script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+  (function(){
+    let popupwin=function(){
+      console.log('this','요기!')
+    }
+  })()
+</script>
 
 
 </body>
