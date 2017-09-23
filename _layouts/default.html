@@ -33,7 +33,9 @@
      <a href="{{site.baseurl}}/"><h1 class="site-title">{{site.title}}</h1></a>
 </header>
   {{ content }}
-  {% include disqus.html %}
+  {% if page.layout == 'post' %}
+    {% include disqus.html %}
+  {% endif %}  
   <script id="dsq-count-scr" src="//sindevdoggy-disqus-com.disqus.com/count.js" async></script>
 </div>
   <!-- Calling Fontawesome at the end to avoid delay in loading -->
