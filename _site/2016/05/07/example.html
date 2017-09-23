@@ -15,6 +15,10 @@
     .links .on:hover{
       cursor:pointer;
     }
+    .hideul{
+      display: none;
+    }
+
   </style>
 </head>
 <body>
@@ -27,6 +31,11 @@
       <a href="//"><i class="fa fa-home"></i>&nbsp;Home</a>
       <a href="//about/"><i class="fa fa-user"></i>&nbsp;About</a>
       <div class="on"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</div>
+        <ul class='hideul'>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
       <!-- href="//archive/" -->
       <a href="//contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a>
       <a href="https://github.com/SinYongJu.github.io"><i class="fa fa-code-fork"></i>&nbsp;Project</a>
@@ -169,8 +178,11 @@ s.setAttribute('data-timestamp', +new Date());
 <script type="text/javascript">
   (function(){
     console.log('호우')
-    $(document).on('click',function(){
+    $(document).on('hover',function(e){
         console.log('this','요기!')
+        e.preventDefault()
+
+
     })
 
   })()
