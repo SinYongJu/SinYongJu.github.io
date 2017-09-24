@@ -11,6 +11,11 @@ sass:
 analytics: UA-83979019-1
 disqus: sindevdoggy-disqus-com
 
+
+categoies : ["node.js","java","Spring","javascript","html,css"]
+# 카테고리 테스트!
+
+
 exclude:
 - README.md
 
