@@ -3,7 +3,9 @@ layout: post
 title: Contact
 permalink: /contact/
 ---
+<section id="contact">
 
+</section>
 Insert a form or contact details here.
 
 More about jekyll forms here: [https://blog.webjeda.com/jekyll-contact-form/](https://blog.webjeda.com/jekyll-contact-form/)
@@ -21,5 +23,3 @@ Be in touch and get updates on our new themes in your facebook feed by liking us
 
 
 <div class="fb-page" data-href="https://www.facebook.com/webjeda/" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/webjeda/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/webjeda/">WebJeda</a></blockquote></div>
-
-
