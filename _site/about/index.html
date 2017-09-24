@@ -58,7 +58,7 @@
     
     <div class="title" style="color:#620d1b;">
         <h2>About Me!!</h2>
-        <span>/about/</span>
+        <!-- <span>/about/</span> -->
         <span>
             <time datetime="">
                    
@@ -154,7 +154,7 @@ s.setAttribute('data-timestamp', +new Date());
 <script type="text/javascript">
   (function(){
     console.log('호우')
-    $('.on').on('mouseenter mouseleave',function(e){
+    $('.on').on('mouseenter',function(e){
         console.log('this','요기!')
         $('.hideUl').css('display','block');
         e.preventDefault()
@@ -162,6 +162,13 @@ s.setAttribute('data-timestamp', +new Date());
 
     })
 
+    $('.on').on('mouseleave',function(e){
+        console.log('this','요기!')
+        $('.hideUl').css('display','none');
+        e.preventDefault()
+
+
+    })
   })()
 </script>
 

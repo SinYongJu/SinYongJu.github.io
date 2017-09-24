@@ -67,7 +67,7 @@
 <script type="text/javascript">
   (function(){
     console.log('호우')
-    $('.on').on('mouseenter mouseleave',function(e){
+    $('.on').on('mouseenter',function(e){
         console.log('this','요기!')
         $('.hideUl').css('display','block');
         e.preventDefault()
@@ -75,6 +75,13 @@
 
     })
 
+    $('.on').on('mouseleave',function(e){
+        console.log('this','요기!')
+        $('.hideUl').css('display','none');
+        e.preventDefault()
+
+
+    })
   })()
 </script>
 
