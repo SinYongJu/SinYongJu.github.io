@@ -25,15 +25,18 @@
 <label id="label-ham" for="hamburger"></label>
 <div class="menu-container">
   <div class="menu"></div>
-  <p></p>
+  <!-- <p></p> -->
+  <!--  site의 전역변수화-->
   <div class="links">
       <a href="//"><i class="fa fa-home"></i>&nbsp;Home</a>
       <a href="//about/"><i class="fa fa-user"></i>&nbsp;About</a>
       <a class="on" href="//archive/"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</a>
         <ul class='hideUl'>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li><a class="on" href="///"><i class="fa fa-file-zip-o"></i>&nbsp;</a></li>
+          <li><a class="on" href="///"><i class="fa fa-file-zip-o"></i>&nbsp;</a></li>
+          <li><a class="on" href="///"><i class="fa fa-file-zip-o"></i>&nbsp;</a></li>
+          <li><a class="on" href="///"><i class="fa fa-file-zip-o"></i>&nbsp;</a></li>
+          <li><a class="on" href="///"><i class="fa fa-file-zip-o"></i>&nbsp;</a></li>
         </ul>
       <!--  -->
       <!-- <a href="//contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a> -->
@@ -122,6 +125,7 @@
     console.log('호우')
     $('.on').on('mouseenter mouseleave',function(e){
         console.log('this','요기!')
+        $('hideUl').css('display','block');
         e.preventDefault()
 
 

@@ -27,15 +27,18 @@
 <label id="label-ham" for="hamburger"></label>
 <div class="menu-container">
   <div class="menu"></div>
-  <p>{{site.categoies[0]}}</p>
+  <!-- <p>{{site.categoies[0]}}</p> -->
+  <!--  site의 전역변수화-->
   <div class="links">
       <a href="{{site.baseurl}}/"><i class="fa fa-home"></i>&nbsp;Home</a>
       <a href="{{site.baseurl}}/about/"><i class="fa fa-user"></i>&nbsp;About</a>
       <a class="on" href="{{site.baseurl}}/archive/"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</a>
         <ul class='hideUl'>
-          <li></li>
-          <li></li>
-          <li></li>
+          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[0]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[0]}}</a></li>
+          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[1]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[1]}}</a></li>
+          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[2]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[2]}}</a></li>
+          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[3]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[3]}}</a></li>
+          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[4]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[4]}}</a></li>
         </ul>
       <!--  -->
       <!-- <a href="{{site.baseurl}}/contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a> -->
@@ -62,6 +65,7 @@
     console.log('호우')
     $('.on').on('mouseenter mouseleave',function(e){
         console.log('this','요기!')
+        $('hideUl').css('display','block');
         e.preventDefault()
 
 
