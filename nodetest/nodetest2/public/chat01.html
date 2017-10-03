@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>채팅 클라! 01</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h3>채팅 클라이언트</h3><br>
+    <div class="">
+      <input type="text" id="hostInput" value="localhost">
+      <input type="text" id="portInput" value="3000">
+      <input type="button" id="connectionButton" value="연결하기"></br>
+      <input type="text" id="senderInput" value="test01"></br>
+      <input type="text" id="recepientInput" value="ALL"></br>
+      <input type="text" id="dataInput" value="안녕"></br>
+      <input type="button" id="sendButton" value="전송"></br>
+    </div>
+
+    <hr/>
+    <p>Result : </p>
+    <div class="result">
+
+    </div>
+
+    <script>
+      var host,port,socket;
+
+      // 문서 로딩후 실행
+      $(function(){
+        $('#connectionButton').bind('click', function(e){
+          println('connectionButton clcik!')
+          host = $('#hostInput').val();
+          port = $('#portInput').val();
+
+          var options = {'forceNew' : true};
+          var url = 'http://' + host +':'+port;
+
+          console.log(options)
+          console.log(url)
+
+          socket = io.connect(url, options);
+
+
+          //
+          socket.on('connect',function(){
+            println('웹소켓 연결 :' + url);
+            console.log('connect안임....')
+            socket.on('message', function(message){
+              console.log(JSON.stringify(message));
+
+
+
+              println('<p>수신 메세지'+ message.sender + ',' +message.recepient +
+            ',' +message.command+','+message.type+','+message.data+'</p>');
+            });
+          //
+          });
+          //
+          $('#sendButton').on('click',function(){
+            var sender = $('#senderInput').val()
+            var recepient = $('#recepientInput').val()
+            var data = $('#dataInput').val()
+
+            console.log('서버로 보낼 데이터 '+ JSON.stringify(output))
+            var output = {sender : sender, recepient : recepient, command : 'chat', type : 'text', data : data};
+            if(socket== undefined){
+              alert('서버에 연결되있지 않아요!')
+              return
+            }
+
+            socket.emit('message', output)
+
+          })
+
+
+
+
+
+
+          socket.on('disconnect',function(){
+            println('웹소켓 끊음')
+          //
+          })
+        });
+
+      });
+
+      function println (data) {
+        console.log('println')
+        $('.result').append('<p>'+data+'</p>');
+
+      }
+
+    </script>
+  </body>
+</html>

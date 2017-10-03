@@ -1,0 +1,33 @@
+
+
+3. 1번에서 구성한 데이터베이스를 토대로 아래 사항의 맞는 쿼리를 작성하세요. (배점 10)
+
+
+1. 사용자 A가 사용자 B에게 좋아요를 보냈는지 여부
+   select * from lik where user_id = (사용자 A의 user_id) and opp_id =(사용자 A의 user_id) ;
+
+
+
+2. 사용자 A가 사용자 B에게 연결되었는지 여부
+   select like_fl from lik where user_id = (사용자 A의 user_id) and opp_id =(사용자 A의 user_id);
+
+
+
+3. 사용자 A가 접속중인 대화방 정보
+  chatroom의 status는 0: 대화없음/나감, 1: 대화중, 2: 좋아요 누른 사람 나감, 3: 좋아요 당한 사람 나감
+
+  select c.stat from chatroom c
+  where (select l.like_id from lik l where user_id = (사용자 A의 user_id))
+  as b = c.like_id;
+
+
+4. 사용자 A의 프로필(닉네임, 성별, 생일, 관심사)정보를 포함하여 조회
+
+select u.nick, u.gender, u.birth_dt, (SELECT GROUP_CONCAT(in.cont SEPARATOR ',') AS cont_NAME from interest in where in.user_id = (사용자 A의 user_id))
+as userinterest from user u where u.user_id = (사용자 A의 user_id)
+
+
+5. 사용자 A를 ‘좋아요’한 사용자들의 프로필(닉네임, 성별, 생일, 관심사)정보를 포함하여 조회
+
+select u.nick, u.gender, u.birth_dt, (SELECT GROUP_CONCAT(in.cont SEPARATOR ',') AS cont_NAME from interest in where in.user_id = (사용자 A의 user_id))
+as userinterest from (select li.user_id from lik li where li.opp_id = (사용자 A의 user_id)) as l left join on u.user_id = l.user_id;

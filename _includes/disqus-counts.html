@@ -1,0 +1,155 @@
+-- user
+DROP TABLE IF EXISTS user;
+
+-- like
+DROP TABLE IF EXISTS LIK;
+
+-- chatroom
+DROP TABLE IF EXISTS CHATROOM;
+
+-- interest
+DROP TABLE IF EXISTS INTEREST;
+
+
+CREATE TABLE USER (
+	USER_id  INTEGER     NOT NULL, -- id
+	NICK     VARCHAR(10) NOT NULL, -- 닉네임
+	GENDER   BOOLEAN     NOT NULL, -- 성별
+	BIRTH_DT DATE        NOT NULL  -- 생일
+);
+
+-- 유저기본키
+CREATE UNIQUE INDEX PK_USER
+	ON USER ( -- 유저
+		USER_id ASC -- id
+	);
+
+--유저
+ALTER TABLE USER
+	ADD
+		CONSTRAINT PK_USER -- 유저 기본키
+		PRIMARY KEY (
+			USER_id -- id
+		);
+
+
+ALTER TABLE USER
+	MODIFY COLUMN USER_ID INTEGER NOT NULL AUTO_INCREMENT COMMENT 'USERID';
+
+
+
+
+-- 좋아요
+CREATE TABLE LIK (
+	like_id INTEGER NOT NULL, -- 좋아요id
+	USER_id INTEGER NOT NULL, -- id
+	opp_id  INTEGER NOT NULL, -- 상대방
+	LIKE_FL BOOLEAN NULL     DEFAULT false -- 수락여부/대화방생성여부
+);
+
+-- 좋아요 기본키
+CREATE UNIQUE INDEX PK_LIK
+	ON LIK ( -- 좋아요
+		like_id ASC -- 좋아요id
+	);
+
+-- 좋아요
+ALTER TABLE LIK
+	ADD
+		CONSTRAINT PK_LIK -- 좋아요 기본키
+		PRIMARY KEY (
+			like_id -- 좋아요id
+		);
+
+
+
+
+ALTER TABLE LIK
+	MODIFY COLUMN LIKE_ID INTEGER NOT NULL AUTO_INCREMENT COMMENT 'LIKID';
+
+
+
+-- 대화방
+CREATE TABLE CHATROOM (
+	CHAT_id INTEGER     NOT NULL, -- 대화방id
+	STAT    VARCHAR(10) NULL     DEFAULT 0, -- 대화방상태
+	like_id INTEGER     NULL      -- 좋아요id
+);
+
+-- 대화방 기본키
+CREATE UNIQUE INDEX PK_CHATROOM
+	ON CHATROOM ( -- 대화방
+		CHAT_id ASC -- 대화방id
+	);
+
+-- 대화방
+ALTER TABLE CHATROOM
+	ADD
+		CONSTRAINT PK_CHATROOM -- 대화방 기본키
+		PRIMARY KEY (
+			CHAT_id -- 대화방id
+		);
+
+
+
+
+
+ALTER TABLE CHATROOM
+	MODIFY COLUMN CHAT_ID INTEGER NOT NULL AUTO_INCREMENT COMMENT 'CHATID';
+
+
+
+-- 유저 관심사
+CREATE TABLE INTEREST (
+	USER_id INTEGER     NULL, -- id
+	CONT    VARCHAR(30) NULL  -- 관심사
+);
+
+-- 좋아요
+ALTER TABLE LIK
+	ADD
+		CONSTRAINT FK_USER_TO_LIK -- 유저 -> 좋아요
+		FOREIGN KEY (
+			USER_id -- id
+		)
+		REFERENCES USER ( -- 유저
+			USER_id -- id
+		);
+
+-- 대화방
+ALTER TABLE CHATROOM
+	ADD
+		CONSTRAINT FK_LIK_TO_CHATROOM -- 좋아요 -> 대화방
+		FOREIGN KEY (
+			like_id -- 좋아요id
+		)
+		REFERENCES LIK ( -- 좋아요
+			like_id -- 좋아요id
+		);
+
+-- 유저 관심사
+ALTER TABLE INTEREST
+	ADD
+		CONSTRAINT FK_USER_TO_INTEREST -- 유저 -> 유저 관심사
+		FOREIGN KEY (
+			USER_id -- id
+		)
+		REFERENCES USER ( -- 유저
+			USER_id -- id
+		);
+-- 대화방 트리거
+
+delimiter |
+
+CREATE TRIGGER CHATTRG
+	BEFORE UPDATE ON LIk FOR EACH ROW
+	BEGIN
+          INSERT INTO CHATROOM (like_id) values (new.like_id);
+
+	END;
+|
+
+delimiter;
+
+
+-- SELECT GROUP_CONCAT(cont SEPARATOR ',') AS cont_NAME from interest where user_id = 1;
