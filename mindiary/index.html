@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>하루를 추억하자</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  </head>
+  <style media="screen">
+    body {
+      background-image: url("image/IMG_7557.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: black;
+      opacity: 0.8;
+      min-height:600px;
+      margin: 0px;
+    }
+
+    .title {
+      padding: 150px 0 50px 0;
+      margin: 0;
+      font-weight: bold;
+      font-size: 78px;
+      text-align: center;
+
+    }
+    .textbox {
+      text-align: center;
+    }
+
+
+
+    .login-permission-con a {
+      font-size: 2em;
+      display: inline-block;
+      border-radius: 30px;
+      width: 30%;
+      height: 40px;
+      background-color: #363c42;
+    }
+
+    .intro-box {
+      display: inline-block;
+      text-align: left;
+      line-height: 35px;
+    }
+
+    .blackmask {
+      text-align: center;
+      background-color: black;
+      opacity: 0.8;
+      position: absolute;
+      width: 100%;
+      min-height: 100%;
+      color: #fff;
+
+    }
+    .blackmask .login-con{
+      display: inline-block;
+      width: 30%;
+    height: 300px;
+    background-color: cadetblue;
+    padding-top: 0px;
+    margin-top: 170px;
+    /*opacity: 1.0; 문제의 css*/ 
+    }
+
+    .blackmask .login{
+      display: inline-grid;
+      text-align: left;
+    }
+
+    .oauth-box a {
+      line-height: 35px;
+      display: block;
+    }
+
+    button {
+      display: inline-block;
+    }
+
+    .login-btn-box button.login{
+      float:right;
+    }
+
+  </style>
+  <body>
+    <div class="blackmask">
+     <div class="login-con">
+      <div class="login">
+        <strong>Email</strong>
+        <input type="text" name="" value="">
+        <strong>password</strong>
+        <input type="text" name="" value="">
+        <div class="oauth-box">
+          <a href="#">face-book</a>
+          <a href="#">kakao</a>
+          <a href="#">naver</a>
+        </div>
+        <div class="login-btn-box">
+          <button type="button" name="button">cancle</button>
+          <button class="login" type="button" name="button">login</button>
+        </div>
+      </div>
+     </div><!--login-con-->
+    </div><!--blackmask-->
+    <div class="container">
+       <p class="title">
+        <i class="fa fa-book" aria-hidden="true"></i> Mini Diary
+       </p>
+       <div class="textbox">
+         <div class="login-permission-con">
+           <a href="#" class="login-btn">로그인 하시겠어요?!</a>
+         </div>
+         <div class="intro-box">
+           <ul>
+             <li>간단하게 하루를 정리하세요</li>
+             <li>오늘 하루에 점수를 매겨보아요!</li>
+             <li>하루를 추억해 보아요!</li>
+           </ul>
+         </div>
+       </div><!--textbox-->
+    </div><!-- container -->
+  </body>
+</html>
