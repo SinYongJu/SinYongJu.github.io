@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="{{site.baseurl}}/css/syntax-highlighter.css">
   {% endif %}
   <link href="//fonts.googleapis.com/css?family=Space+Mono|Work+Sans:700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <style media="screen">
     .links .on:hover{
       cursor:pointer;
@@ -63,10 +65,11 @@
   <!-- Calling Fontawesome at the end to avoid delay in loading -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 {% include analytics.html %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 <script type="text/javascript">
   (function(){
-    // console.log('호우')
+    console.log('호우')
+    console.log($('.links'))
     // $('.on').on('mouseenter',function(e){
     //     console.log('this','요기!')
     //     $('.hideUl').css('display','block');
