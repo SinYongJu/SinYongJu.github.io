@@ -2,6 +2,7 @@
 layout: post
 title:  "JavaScript 생각난 김에 변수 선언에 관한 포스팅!"
 icon:  heart-o
+categoies: javascript
 
 ---
 

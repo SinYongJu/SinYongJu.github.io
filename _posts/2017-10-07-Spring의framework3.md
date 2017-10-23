@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring framework 3"
 icon:  heart-o
-
+categoies: Spring
 ---
 
 어노테이션 기반 설정
