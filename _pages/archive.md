@@ -6,7 +6,9 @@ permalink: /archive/
 
 <section id="archive">
 <h2><i class="fa fa-file-archive-o"></i>&nbsp;Articles from this year</h2>
+
 {% for post in site.posts %}
+  <h>{{post.categoies}}</h>
   {% unless post.next %}
 
   <ul class="this">
