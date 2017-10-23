@@ -8,6 +8,9 @@ permalink: /archive/
 <h2><i class="fa fa-file-archive-o"></i>&nbsp;Articles from this year</h2>
 
 {% for post in site.posts %}
+
+{% if post.category == 'javascript' %}
+
   {% unless post.next %}
   <ul class="this">
   {% else %}
@@ -20,7 +23,8 @@ permalink: /archive/
   {% endif %}
   {% endunless %}
  <li class="arch-list" data-cate="{{post.category}}"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
- {% endfor %}
+{% endif %}
+{% endfor %}
   </ul>
 
 </section>
