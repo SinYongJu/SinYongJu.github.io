@@ -8,17 +8,21 @@ permalink: /archive/
 <h2><i class="fa fa-file-archive-o"></i>&nbsp;Articles from this year</h2>
 
 {% for post in site.posts %}
-  <h>{{post.categoies}}</h>
+  <!-- <h>{{post.categoies}}</h> -->
   {% unless post.next %}
 
   <ul class="this">
   {% else %}
+
   {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
   {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-  {% if year != nyear %}
-  </ul>
-  <h2>{{ post.date | date: '%Y' }}</h2>
 
+  {% capture cate %}{{ post.categoies }}{% endcapture %}
+  {% capture ncate %}{{ post.next.categoies }}{% endcapture %}
+
+  {% if (year != nyear && cate ! = ncate) %}
+  </ul>
+  <h2>{{ post.date | date: '%Y' }}{{post.categoies}}</h2>
   <ul class="past">
   {% endif %}
   {% endunless %}
