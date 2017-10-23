@@ -9,10 +9,11 @@ sass:
 
 # Tracker
 analytics: UA-83979019-1
+
 disqus: sindevdoggy-disqus-com
 
 
-categoies : ["node.js","java","Spring","javascript","html,css","jekyll"]
+categoies : ["node","java","Spring","javascript","html,css","jekyll"]
 # 카테고리 테스트!
 
 

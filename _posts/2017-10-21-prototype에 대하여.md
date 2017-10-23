@@ -2,7 +2,7 @@
 layout: post
 title:  "prototype에 대하여!"
 icon:  heart-o
-categoies: javascript
+category: javascript
 
 ---
 
