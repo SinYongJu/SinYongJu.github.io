@@ -64,7 +64,7 @@ categoies: javascript
   프로토타입 == 어떠한 객체가 만들어지기 위해 그 객체의 모태가 되는 녀석을 프로토타입
 
 
-  {% highlight html %}
+  {% highlight html linenos %}
     function who() {}
 
     var A = new who()
@@ -77,7 +77,7 @@ categoies: javascript
 
   {% endhighlight %}
 
-  {% highlight html %}
+  {% highlight html linenos %}
   // 요건 비교용!!! new 연산자를 사용 안했을을 경우
     function who() {}
 
@@ -179,7 +179,7 @@ who.prototype.x // 오호라~!
 흠 이론 부턴
 
 
-{% highlight html %}
+{% highlight html linenos %}
 
 function who() {}
 
@@ -228,7 +228,7 @@ who.prototype.x에 의한 x라는 메서드의 재정의가 a,b에 영향을 끼
 원래는 who 에는 없던 메서드 x를 prototype객체로 추가
 
 
-{% highlight html %}
+{% highlight html linenos %}
 
 function who() {
 this.x = function () {
