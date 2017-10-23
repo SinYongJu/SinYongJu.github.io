@@ -2,7 +2,7 @@
 layout: post
 title:  "template engine에 대해서"
 icon:  heart-o
-categoies: web
+category: web
 
 ---
 

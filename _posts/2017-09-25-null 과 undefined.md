@@ -2,7 +2,7 @@
 layout: post
 title:  "null과 undefined"
 icon:  heart-o
-categoies: javascript
+category: javascript
 
 ---
 
