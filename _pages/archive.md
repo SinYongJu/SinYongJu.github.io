@@ -3,7 +3,7 @@ layout: post
 title: Archive
 permalink: /archive/
 ---
-
+<!--
 <section id="archive">
 <h2><i class="fa fa-file-archive-o"></i>&nbsp;Articles from this year</h2>
 
@@ -16,11 +16,11 @@ permalink: /archive/
           {% else %}
            <li class="arch-list" ><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
           {% endif %}<!--if-->
+<!--
    {% endfor %}
   </ul>
 {% endfor %}
 </section>
-<!--
 
 <script type="text/javascript">
   (function(){
@@ -30,7 +30,7 @@ permalink: /archive/
   })()
 </script> -->
 
-<!-- <section id="archive">
+<section id="archive">
 <h2><i class="fa fa-file-archive-o"></i>&nbsp;Articles from this year</h2>
 
 {% for post in site.posts %}
@@ -49,4 +49,4 @@ permalink: /archive/
  {% endfor %}
   </ul>
 
-</section> -->
+</section>
