@@ -3,36 +3,22 @@ layout: post
 title: Archive
 permalink: /archive/
 ---
-<!--
+
 <section id="archive">
 <h2><i class="fa fa-file-archive-o"></i>&nbsp;Articles from this year</h2>
 
 {% for cate in site.categoies %}
+    <h2>{cate}</h2>
+    <ul class="this">
     {% for post in site.posts %}
           {% if post.category == cate %}
-
-            {% unless post.next %}
-            <h2>{post.category}</h2>
-            <ul class="this">
-
-            {% else %}
-
-            {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-            {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-
-            {% if (year != nyear && cate ! = ncate) %}
-            </ul>
-            <h2>{{ post.date | date: '%Y' }}</h2>
-            <ul class="past">
-            {% endif %}
-
-          {% endunless %}
            <li class="arch-list" data-cate="cate"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
           {% endif %}<!--if-->
-<!--    {% endfor %}
+   {% endfor %}
   </ul>
 {% endfor %}
 </section>
+<!--
 
 <script type="text/javascript">
   (function(){
@@ -42,7 +28,7 @@ permalink: /archive/
   })()
 </script> -->
 
-<section id="archive">
+<!-- <section id="archive">
 <h2><i class="fa fa-file-archive-o"></i>&nbsp;Articles from this year</h2>
 
 {% for post in site.posts %}
@@ -61,4 +47,4 @@ permalink: /archive/
  {% endfor %}
   </ul>
 
-</section>
+</section> -->
