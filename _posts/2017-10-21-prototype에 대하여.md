@@ -130,7 +130,7 @@ prototype에 대한 Link인데
                  함수 객체즉 생성자에 해당하는 프로퍼티 이다.)
 
 
-{% highlight html %}
+{% highlight html linenos %}
  function who(x) {
    this.x = x
  }
