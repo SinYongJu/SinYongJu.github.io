@@ -10,17 +10,21 @@ permalink: /archive/
 {% for cate in site.categoies %}
     {% for post in site.posts %}
           {% if post.category == cate %}
+
             {% unless post.next %}
-            <h2>{cate}</h2>
+            <h2>{post.category}</h2>
             <ul class="this">
+
             {% else %}
+
             {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
             {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-            {% if (year != nyear && cate ! = ncate) %}
+            {% if !post.next %}
             </ul>
-            <h2>{{ post.date | date: '%Y' }}</h2>
-            <ul class="past">
+            <!-- <h2>{{ post.date | date: '%Y' }}</h2>
+            <ul class="past"> -->
             {% endif %}
+
           {% endunless %}
            <li class="arch-list" data-cate="cate"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
           {% endif %}<!--if-->
