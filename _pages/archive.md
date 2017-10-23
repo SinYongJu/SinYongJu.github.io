@@ -11,6 +11,7 @@ permalink: /archive/
     {% for post in site.posts %}
           {% if post.category == cate %}
             {% unless post.next %}
+            <h2>{cate}</h2>
             <ul class="this">
             {% else %}
             {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
@@ -20,7 +21,7 @@ permalink: /archive/
             <h2>{{ post.date | date: '%Y' }}</h2>
             <ul class="past">
             {% endif %}
-            {% endunless %}
+          {% endunless %}
            <li class="arch-list" data-cate="cate"><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a>&nbsp;<time>{{ post.date | date:"%d %b" }}</time></li>
           {% endif %}<!--if-->
     {% endfor %}<!--for-->
