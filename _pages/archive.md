@@ -24,3 +24,25 @@ permalink: /archive/
   </ul>
 
 </section>
+
+<script type="text/javascript">
+  (function(){
+    console.log('호우 achieve')
+    console.log($('.this'))
+    // $('.on').on('mouseenter',function(e){
+    //     console.log('this','요기!')
+    //     $('.hideUl').css('display','block');
+    //     e.preventDefault()
+    //
+    //
+    // })
+    //
+    // $('.on').on('mouseleave',function(e){
+    //     console.log('this','요기!')
+    //     $('.hideUl').css('display','none');
+    //     e.preventDefault()
+    //
+    //
+    // })
+  })()
+</script>
