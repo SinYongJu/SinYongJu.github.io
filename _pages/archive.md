@@ -9,10 +9,14 @@ permalink: /archive/
 
 {% for post in site.posts %}
 
-{% if post.category %}
-  <h2>{{ post.category}}</h2>
-{% endif %}
+  {% capture cate %}{{ post.category }}{% endcapture %}
+  {% capture ncater %}{{ post.next.category }}{% endcapture %}
+
+
   {% unless post.next %}
+  {% if cate == ncate %}
+    <h2>{{ post.category}}</h2>
+  {% endif %}
   <ul class="this">
   {% else %}
 
@@ -21,6 +25,7 @@ permalink: /archive/
 
 
   {% if (year != nyear && cate ! = ncate) %}
+
   </ul>
   <h2>{{ post.date | date: '%Y' }}</h2>
   <ul class="past">
