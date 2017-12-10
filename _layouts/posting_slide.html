@@ -1,3 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<!--<link rel="stylesheet" href="./dist/css/style.css"/>-->
+	<style>
+		body{padding:0;margin:0}
+		body > div{position:relative;overflow:hidden;margin:0 auto; padding:50px 0;width:300px;height:100px}
+		ul{position:absolute;overflow:hidden;margin:0;padding:0;width:1500px;height:50%}
+		li{list-style:none;float:left;width:300px;height:100px;-moz-transition:transform 500ms;-webkit-transition:transform 500ms;text-align:center;font-weight:bold;line-height:100px;font-size:20px}
+		li:nth-child(1){background-color:red}
+		li:nth-child(2){background-color:blue}
+		li:nth-child(3){background-color:yellow}
+		li:nth-child(4){background-color:green}
+		li:nth-child(5){background-color:pink}
+		.wrap_slide4 .pagination_btn{position:absolute;left:36%;bottom:25%}
+		input[type="radio"]{position:absolute;bottom:27%;z-index:1}
+		input[type="radio"]:nth-child(1){left: 35%}
+		input[type="radio"]:nth-child(2){left: 40%}
+		input[type="radio"]:nth-child(3){left: 45%}
+		input[type="radio"]:nth-child(4){left: 50%}
+		input[type="radio"]:nth-child(5){left: 55%}
+		input[type="radio"]:checked:nth-child(1)~ul li{-webkit-transform: translate(0px, 0px);-moz-transform: translate(0px, 0px)}
+		input[type="radio"]:checked:nth-child(2)~ul li{-webkit-transform: translate(-300px, 0px);-moz-transform: translate(-300px, 0px)}
+		input[type="radio"]:checked:nth-child(3)~ul li{-webkit-transform: translate(-600px, 0px);-moz-transform: translate(-600px, 0px)}
+		input[type="radio"]:checked:nth-child(4)~ul li{-webkit-transform: translate(-900px, 0px);-moz-transform: translate(-900px, 0px)}
+		input[type="radio"]:checked:nth-child(5)~ul li{-webkit-transform: translate(-1200px, 0px);-moz-transform: translate(-1200px, 0px)}
+	</style>
+</head>
+<body>
+<h2>slider1의 구현 mouseenter</h2>
+<div>
+	<ul id="container_slide1">
+		<li class="slide1">1</li>
+		<li class="slide1">2</li>
+		<li class="slide1">3</li>
+		<li class="slide1">4</li>
+		<li class="slide1">5</li>
+	</ul>
+</div>
+<h2>slider2의 구현 일방향 click</h2>
+<div>
+	<ul id="container_slide2">
+		<li class="slide2">1</li>
+		<li class="slide2">2</li>
+		<li class="slide2">3</li>
+		<li class="slide2">4</li>
+		<li class="slide2">5</li>
+	</ul>
+</div>
+<h2>slider3의 구현 자동 슬라이더</h2>
+<div>
+	<ul id="container_slide3">
+		<li class="slide3">1</li>
+		<li class="slide3">2</li>
+		<li class="slide3">3</li>
+		<li class="slide3">4</li>
+		<li class="slide3">5</li>
+	</ul>
+</div>
+<h2>slider4의 구현 pagination btn</h2>
+<div class="wrap_slide4">
+	<ul id="container_slide4">
+		<li class="slide4">1</li>
+		<li class="slide4">2</li>
+		<li class="slide4">3</li>
+		<li class="slide4">4</li>
+		<li class="slide4">5</li>
+	</ul>
+	<div class="pagination_btn">
+		<button type="button" name="left">&lt</button>
+		<button type="button" name="right">&gt</button>
+	</div>
+</div>
+<h2>slider5의 구현 radio_btn을 이용한 only-css</h2>
+<div class="wrap_this">
+
+	<input checked="checked" type="radio" name="radio_slide5" value="1"/>
+	<input type="radio" name="radio_slide5" value="2"/>
+	<input type="radio" name="radio_slide5" value="3"/>
+	<input type="radio" name="radio_slide5" value="4"/>
+	<input type="radio" name="radio_slide5" value="5"/>
+
+
+	<ul id="container_slide5">
+		<li class="slide5">1</li>
+		<li class="slide5">2</li>
+		<li class="slide5">3</li>
+		<li class="slide5">4</li>
+		<li class="slide5">5</li>
+	</ul>
+
+
+</div>
+<!--<script src="dist/js/combined.js"></script>-->
+<script>
+    const browserHandler = (function(){
+
+        /*
+		*
+		*  요건 그냥 예시로 짜보는 브라우저 판별용 js 입니다, 브라우저 공부 끝나는 데로 바로 수정할 계획
+		*
+		*
+		* */
+        let attrTransform_thisBrowse;
+        let browseInfo = navigator.userAgent.toLowerCase();
+        let broseVendor = navigator.vendor.toLowerCase()
+
+
+        if(browseInfo.indexOf('opr')!=-1){return attrTransform_thisBrowse = "-webkit-transform"}
+        if(browseInfo.indexOf('chrome')!=-1 && broseVendor.indexOf('google')!=-1){return attrTransform_thisBrowse = "-webkit-transform"}
+        if(browseInfo.indexOf('safari')!=-1){return attrTransform_thisBrowse = "-webkit-transform"}
+        if(browseInfo.indexOf('firefox')!=-1){return attrTransform_thisBrowse = "-moz-transform"}
+
+        return attrTransform_thisBrowse = "-webkit-transform"
+    })()
+</script>
+<script>
+    (function(){
+        /*
+		* 슬라이드1
+		*
+		* 1.크로스브라우징을 한다면?! 저번에 스칼렛의  mtmmsm에서 했던 방식을 적용해 보는 쪽이 좋지 않을까 생각된다.
+		* 1-1. 브라우저 마다 다를꺼를 생각해서 보자
+		* 2.getelementByClass와 queryselectorAll의 차이가 있음 전자는 객체 후자는 배열
+		*
+		*
+		*
+		* 생각 1.prototype 으로 객체 추가를 window나 document객체에 해서 사용하는 방법을 간구해 보자
+		* 먼가 재미질듯 그리고 모듈개념으로! 생각해 보는 것도 재미질듯 합니다.
+		*
+		* 생각 2. 전체 적인 반응형으로 하려면 넓이를 가져와서 duration 에 일괄적으로 넣어주는 작업이 적당할듯 합니다.
+		*
+		* */
+        const slide1 = document.getElementById('container_slide1');
+        const slide1_elem = document.querySelectorAll('.slide1');
+        const slide1_elem_lastIndex = slide1_elem.length;
+
+
+        let duration = -300;
+        let handle = function(){
+            slide1_elem.forEach(function(item){
+
+                if(duration != (slide1_elem_lastIndex * -300)){
+                    item.style[browserHandler]='translate('+ duration +'px,0px)'
+
+                }else{
+                    item.style[browserHandler]='translate(0px,0px)'
+                    return duration = 0;
+                }
+
+            });
+            duration -= 300;
+        };
+        slide1.addEventListener('mouseenter',handle);
+
+
+
+        console.log(browserHandler)
+    })();
+</script>
+<script>
+    (function(){
+        /*
+		*슬라이드2
+		*getelementByClass와 queryselectorAll의 차이가 있음 전자는 객체 후자는 배열
+		* */
+        const slide2 = document.getElementById('container_slide2');
+        const slide2_elem = document.querySelectorAll('.slide2');
+        const slide2_elem_lastIndex = slide2_elem.length;
+        let duration = -300;
+
+        slide2.addEventListener('click',function(){
+            slide2_elem.forEach(function(item){
+                if(duration != slide2_elem_lastIndex * -300){
+                    item.style[browserHandler]='translate('+ duration +'px,0px)'
+                }else{
+                    item.style[browserHandler]='translate(0px,0px)'
+                    return duration = 0;
+                }
+            });
+            duration -= 300;
+        });
+
+    })();
+</script>
+<script>
+    (function(){
+        /*
+		*슬라이드3
+		* 요기서 부터는 addEventListener의 callback을 따로 handler로 저장할꺼임
+		*getelementByClass와 queryselectorAll의 차이가 있음 전자는 객체 후자는 배열
+		* */
+        const slide3_elem = document.querySelectorAll('.slide3');
+        const slide3_elem_lastIndex = slide3_elem.length -1;
+        let duration = 0;
+        let direction = true;
+        let currentDuration;
+        let handle = function(){
+            currentDuration = (slide3_elem_lastIndex *-300);
+            if(direction){
+                duration -= 300;
+
+            }else{
+                duration += 300;
+            };
+
+            if(duration == (slide3_elem_lastIndex *-300)){
+                direction = false;
+
+            }else if(!direction&&duration == 0){
+                direction = true;
+            };
+
+            slide3_elem.forEach(function(item){
+                item.style[browserHandler]='translate('+ duration +'px,0px)'
+            });
+
+        };
+
+        setInterval(handle,1500);
+
+
+    })();
+</script>
+<script>
+    (function(){
+        /*
+		*슬라이드4 pagination btn
+		*getelementByClass와 queryselectorAll의 차이가 있음 전자는 객체 후자는 배열
+		* */
+        const slide4_elem = document.querySelectorAll('.slide4');
+        const slide4_elem_lastIndex = slide4_elem.length-1;
+        const nav_btn = document.querySelector('.pagination_btn');
+        let duration = 0;
+        let handle= function(target) {
+
+            if (target=="right" && duration > -300*slide4_elem_lastIndex) {
+
+                duration -= 300;
+
+            }else if(target == "left" && duration < 0){
+
+                if(duration != 0){
+                    duration += 300;
+                }
+
+            }
+
+            slide4_elem.forEach(function (item) {
+                item.style[browserHandler] = 'translate(' + duration + 'px,0px)'
+            });
+
+        }
+
+        nav_btn.addEventListener('click',function(event){
+
+            if(event.target.localName != "button"){
+                return
+            };
+
+            handle(event.target.name);
+        });
+
+
+    })();
+</script>
+</body>
+</html>
 
 
 
