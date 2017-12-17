@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b2b67bc-c8b7-4143-ae39-7b275b75cac5" name="Default" comment="" />
+    <list default="true" id="0b2b67bc-c8b7-4143-ae39-7b275b75cac5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2017-12-17-리뉴얼 계획안 header 2017.12.17.md" afterPath="$PROJECT_DIR$/_posts/2017-12-17-리뉴얼 계획안 header 2017.12.17.md" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,8 +99,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2017-12-17-리뉴얼 계획안 header 2017.12.17.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="255">
-                <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+              <first_editor relative-caret-position="345">
+                <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -300,12 +302,12 @@
       <workItem from="1512910277921" duration="584000" />
       <workItem from="1512955829748" duration="6000" />
       <workItem from="1513396620818" duration="9811000" />
-      <workItem from="1513493332588" duration="2073000" />
+      <workItem from="1513493332588" duration="2261000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12721000" />
+    <option name="totallyTimeSpent" value="12909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -816,8 +818,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2017-12-17-리뉴얼 계획안 header 2017.12.17.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="34" lean-forward="false" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+          <first_editor relative-caret-position="345">
+            <caret line="23" column="37" lean-forward="false" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
             <folding />
           </first_editor>
           <second_editor />
