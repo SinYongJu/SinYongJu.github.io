@@ -17,11 +17,18 @@ issue :  하코사 세미나를 다녀옴 -> 블로그 깃 주소 나름 뿌림 
 
 ->지금 사용하는 덧글 API!? 이름이 기억이 잘 안남 ㅋㅋㅋㅋ 걍 ㅋㅋㅋㅋㅋ 다시 일단 작업 해야 할듯 ㅋㅋㅋ
 
+-->그래서 현재 이 블로그 테마의 주인이 사용한 코드를 겆어 내고 싶음.
+
 -> header or banner, footer, left - sidemenu 및 가운데 contents container 요론 구조로 코딩을 하려고 함
 
 -> posting은 slider posting처럼 html 만 올려 두어도 갠찮을 듯 싶음
 
 -> So, html + css(with sass) 공부 !!! So Good!!!
+
+--> 레이 아웃 요소를 내식대로  템플릿을 나눠도 될듯
+
+--> 그냥 글 이랑 그런거는 md를 사용하는 것도
+
 
 
 
