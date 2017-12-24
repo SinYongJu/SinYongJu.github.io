@@ -1,0 +1,197 @@
+body{
+    background-color: #eee;
+}
+
+.btn_top{
+    position: fixed;
+    right: 1%;
+    bottom: 20%;
+}
+
+.btn_top a > span{
+    margin-right:30px;
+    color:#919191;
+    font-weight: bold;
+    font-size:40px;
+}
+
+
+.container{
+    overflow: hidden;
+    width:80%;
+    margin: 0 auto;
+
+}
+#header {
+    position:relative;
+    width:100%;
+    height:650px;
+    background-image: url("../images/siba_main.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0px;
+    text-align: center;
+}
+#header a{
+
+    position: absolute;
+    display: block;
+    margin:0 150px;
+    top:50%;
+    color:#fff;
+    font-size: 105px;
+}
+.gnb_main_top{
+    position: fixed;
+    width:100%;
+    top:0;
+    z-index:10;
+    background-color: #000;
+}
+.gnb_main_top li{
+    float:left
+}
+
+.gnb_main_top li:first-child{
+    margin-left: 20px;
+}
+
+.gnb_main_top a{
+    display: inline-block;
+    height: 40px;
+    margin-right: 50px;
+    line-height: 40px;
+    font-size:35px;
+    color:#fff;
+
+}
+.wrap_list {
+    overflow: hidden;
+    margin-top: 20px;
+}
+.wrap_list li{
+    position: relative;
+    float:left;
+    width:24%;
+    height:250px;
+    margin:0 0 10px 5px;
+    border-radius: 0 20px 0 0;
+    border: 1px solid rgba( 0, 0,0, 0.1);
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+
+.wrap_thumb{
+    display: inline-block;
+    float:left;
+    width:50%
+}
+/*.wrap_tit{*/
+    /*float:right*/
+/*}*/
+
+.tit_cont{
+    overflow: hidden;
+    display: -webkit-box;
+    line-height: 18px;
+    color: #333;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    word-wrap: break-word;
+    font-weight: bold;
+    text-overflow: ellipsis;
+
+}
+.nav_side{
+    /*현재는 이렇게 만 좌측 띄우기*/
+    float:left;
+
+}
+.wrap_info:before{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.wrap_info{
+    margin: 0 5px
+}
+.wrap_info p{
+    overflow: hidden;
+    /*display: -webkit-box;*/
+    color: #333;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    word-wrap: break-word;
+    white-space: nowrap;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    padding-bottom: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+.wrap_thumb a, .post-index > a{
+  display: block;
+  overflow: hidden;
+}
+
+.post-index > a{
+    padding: 10px 5px 20px;
+}
+
+
+.wrap_thumb div{
+    display: inline-block;
+    width:80px;
+    height:80px;
+    background-image: url(../images/long_back.png);
+
+}
+.programing_ico{
+
+    background-position: -15px -11px;
+}
+.javascript_ico{
+    background-position: -248px -193px;
+}
+.java_ico{
+    background-position: -240px -99px;
+}
+
+.html_ico{
+    background-position: -130px -192px;
+}
+.node_ico{
+    background-position: -15px -195px;
+}
+
+.desc_cont{
+    overflow: hidden;
+    display: -webkit-box;
+    margin: 5px 5px;
+    line-height: 18px;
+    color: #333;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    word-wrap: break-word;
+    word-break: break-all
+
+}
+
+.info_cont{
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 10px 5px;
+}
+.post_title{overflow: hidden}
+.post_title .wrap_thumb{width:auto }
+.post_title .tit_post strong{font-size:45px}
+
+.container_post{
+    padding: 50px 0 60px 0;
+}
+/*.nav_cont{*/
+    /*height: 50px;*/
+    /*background-color: #eee;*/
+/*}*/
+

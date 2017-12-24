@@ -5,65 +5,58 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- About Me!! -  -->
   <title>Siba를 닮은 '나', DevDoggy</title>
-  <link rel="stylesheet" href="//css/main.css">
-  <!--   Syntax highlighting is only needed for posts -->
+  <!--<link rel="stylesheet" href="//css/main.css">-->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <!--   Syntax highlighting is only needed for posts-->
   
-  <link rel="stylesheet" href="//css/syntax-highlighter.css">
+  <link rel="stylesheet" href="/css/syntax-highlighter.css">
   
   <link href="//fonts.googleapis.com/css?family=Space+Mono|Work+Sans:700" rel="stylesheet">
-  <style media="screen">
-    .links .on:hover{
-      cursor:pointer;
-    }
-    .hideUl{
-      display: none;
-
-    }
-    .hideUl li {
-      font-size: 1.5em;
-    }
-
+  
+  <style>
+    .wrap_thumb{ display: none;}
   </style>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-
-<input type="checkbox" id="hamburger" name="hamburger">
-<label id="label-ham" for="hamburger"></label>
-<div class="menu-container" style="display:block;">
-  <div class="menu"></div>
-  <!-- <p>node.js</p> -->
-  <!--  site의 전역변수화-->
-  <div class="links">
-      <a href="//"><i class="fa fa-home"></i>&nbsp;Home</a>
-      <a href="//about/"><i class="fa fa-user"></i>&nbsp;About</a>
-      <a class="on" href="//archive/"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</a>
-        <ul class='hideUl'>
-          <li><a class="on" href="//node.js/"><i class="fa fa-file-zip-o"></i>&nbsp;node.js</a></li>
-          <li><a class="on" href="//java/"><i class="fa fa-file-zip-o"></i>&nbsp;java</a></li>
-          <li><a class="on" href="//Spring/"><i class="fa fa-file-zip-o"></i>&nbsp;Spring</a></li>
-          <li><a class="on" href="//javascript/"><i class="fa fa-file-zip-o"></i>&nbsp;javascript</a></li>
-          <li><a class="on" href="//html,css/"><i class="fa fa-file-zip-o"></i>&nbsp;html,css</a></li>
-        </ul>
-      <!--  -->
-      <!-- <a href="//contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a> -->
-      <a href="https://github.com/SinYongJu/SinYongJu.github.io"><i class="fa fa-code-fork"></i>&nbsp;Project</a>
-  </div>
+<ul class="gnb_main_top">
+	<li><a href="/about/"><span class="fa fa-bars" aria-hidden="true"></span></a></li>
+	<li><a href="/"><span class="fa fa-home" aria-hidden="true"></span>Home</a></li>
+	<li><a><span class="fa fa-user" aria-hidden="true"></span>Me?!</a></li>
+</ul>
+<div id="header">
+	<a href="/">
+		<h6 class="site-title">Siba를 닮은 '나', DevDoggy</h6>
+	</a>
 </div>
+<!--17/12/18 수정 기획안 -->
+<ul class="nav_side">
+	<li class="screen_out">아직 리뉴얼 작업중입니다 ㅋㅋ 양해좀 구할게요 위에 버튼도 막 안되고 걍 보기?! 그것도 퀄 겁나 낮아요 시간이 없네요 </li>
+	<!--<li>js</li>-->
+	<!--<li>java</li>-->
+	<!--<li>html+css</li>-->
+	<!--<li>web</li>-->
+</ul>
+<div class="container">
 
-<div class="content">
-<header>
-     <a href="//"><h1 class="site-title">Siba를 닮은 '나', DevDoggy</h1></a>
-</header>
-  <div class="post-title">
-    
-    <div class="title" style="color:#620d1b;">
-        <h2>About Me!!</h2>
+<ul class="wrap_list">
+	<div class="post_title">
+    <div class="wrap_thumb">
+        
+        <div class=_ico></div>
+        
+    </div>
+    <div class="tit_post" style="color:#620d1b;">
+        <strong>About Me!!</strong>
         <!-- <span>/about/</span> -->
-        <span>
+        <p>
             <time datetime="">
                    
             </time>
-        </span>
+        </p>
         <span>
           
         </span>
@@ -71,8 +64,8 @@
     </div>
 </div>
 
-
-<p>안녕하세요?! Full-stack 개발자를 지향하는 신참입니다.</p>
+<div class="container_post">
+    <p>안녕하세요?! Full-stack 개발자를 지향하는 신참입니다.</p>
 
 <p>개발 공부를 시작한 시기는 2017년 3월 부터입니다. 스타트업을 진행하던 중  하드웨어의 한계를 느낀터라 소프트웨어로 하드웨어를 보완할 수 있다는 점을 알게되어 공부를 시작하게 되었습니다. javascript를 시작으로 html,css를 배웠고 json으로 요청 응답하는</p>
 
@@ -107,6 +100,19 @@ https://github.com/sharryhong/zzal-bit93</p>
 <script async="" defer="" src="https://buttons.github.io/buttons.js"></script></p>
 
 <p>프로젝트 관련 github url: https://github.com/sharryhong/zzal-bit93(팀장님)</p>
+
+
+</div>
+
+
+
+
+<script>
+    (function(){
+
+    })();
+</script>
+</ul>
 
 
   
@@ -150,28 +156,13 @@ s.setAttribute('data-timestamp', +new Date());
   ga('send', 'pageview');
 
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    // console.log('호우')
-    // $('.on').on('mouseenter',function(e){
-    //     console.log('this','요기!')
-    //     $('.hideUl').css('display','block');
-    //     e.preventDefault()
-    //
-    //
-    // })
-    //
-    // $('.on').on('mouseleave',function(e){
-    //     console.log('this','요기!')
-    //     $('.hideUl').css('display','none');
-    //     e.preventDefault()
-    //
-    //
-    // })
-  })()
-</script>
 
-
+<div class="btn_top">
+  <a href="#">
+    <span class="screen_out">맨위로</span>
+    <span><i class="fa fa-arrow-up" aria-hidden="true"></i>top</span>
+  </a>
+</div>
+<script src="/js/parrellex_scroll.js"></script>
 </body>
 </html>

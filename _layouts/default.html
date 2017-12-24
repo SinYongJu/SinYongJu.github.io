@@ -5,58 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- {{ page.title }} -  -->
   <title>{{site.title}}</title>
-  <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
-  <!--   Syntax highlighting is only needed for posts -->
+  <!--<link rel="stylesheet" href="{{site.baseurl}}/css/main.css">-->
+  <link rel="stylesheet" href="{{site.baseurl}}css/common.css">
+  <link rel="stylesheet" href="{{site.baseurl}}css/index.css">
+  <!--   Syntax highlighting is only needed for posts-->
   {% if page.layout == 'post' %}
-  <link rel="stylesheet" href="{{site.baseurl}}/css/syntax-highlighter.css">
+  <link rel="stylesheet" href="{{site.baseurl}}css/syntax-highlighter.css">
   {% endif %}
   <link href="//fonts.googleapis.com/css?family=Space+Mono|Work+Sans:700" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <style media="screen">
-    .links .on:hover{
-      cursor:pointer;
-    }
-    .hideUl{
-      display: none;
-
-    }
-    .hideUl li {
-      font-size: 1.5em;
-    }
-
+  {% if page.permalink == '/about/' %}
+  <style>
+    .wrap_thumb{ display: none;}
   </style>
+  {% endif %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+{% include header.html %}
+{% include side_nav.html %}
+<div class="container">
 
-<input type="checkbox" id="hamburger" name="hamburger">
-<label id="label-ham" for="hamburger"></label>
-<div class="menu-container" style="display:block;">
-  <div class="menu"></div>
-  <!-- <p>{{site.categoies[0]}}</p> -->
-  <!--  site의 전역변수화-->
-  <div class="links">
-      <a href="{{site.baseurl}}/"><i class="fa fa-home"></i>&nbsp;Home</a>
-      <a href="{{site.baseurl}}/about/"><i class="fa fa-user"></i>&nbsp;About</a>
-      <a class="on" href="{{site.baseurl}}/archive/"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</a>
-        <ul class='hideUl'>
-          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[0]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[0]}}</a></li>
-          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[1]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[1]}}</a></li>
-          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[2]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[2]}}</a></li>
-          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[3]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[3]}}</a></li>
-          <li><a class="on" href="{{site.baseurl}}/{{site.categoies[4]}}/"><i class="fa fa-file-zip-o"></i>&nbsp;{{site.categoies[4]}}</a></li>
-        </ul>
-      <!--  -->
-      <!-- <a href="{{site.baseurl}}/contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a> -->
-      <a href="https://github.com/SinYongJu/SinYongJu.github.io"><i class="fa fa-code-fork"></i>&nbsp;Project</a>
-  </div>
-</div>
+<ul class="wrap_list">
+	{{content}}
+</ul>
 
-<div class="content">
-<header>
-     <a href="{{site.baseurl}}/"><h1 class="site-title">{{site.title}}</h1></a>
-</header>
-  {{ content }}
+
   {% if page.layout == 'post' %}
     {% include disqus.html %}
   {% endif %}
@@ -66,7 +40,12 @@
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 {% include analytics.html %}
 
-
-
+<div class="btn_top">
+  <a href="#">
+    <span class="screen_out">맨위로</span>
+    <span><i class="fa fa-arrow-up" aria-hidden="true"></i>top</span>
+  </a>
+</div>
+<script src="/js/parrellex_scroll.js"></script>
 </body>
 </html>

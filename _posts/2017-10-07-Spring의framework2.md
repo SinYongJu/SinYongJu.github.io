@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring framework 2"
 icon:  heart-o
-category: Spring
+category : [java,spring]
 ---
 
 스프링 프레임워크에 강려크함은 Container에 의한 객체의 생성과 의존관계에 있다.

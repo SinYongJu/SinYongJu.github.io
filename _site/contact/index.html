@@ -5,65 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Contact -  -->
   <title>Siba를 닮은 '나', DevDoggy</title>
-  <link rel="stylesheet" href="//css/main.css">
-  <!--   Syntax highlighting is only needed for posts -->
+  <!--<link rel="stylesheet" href="//css/main.css">-->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <!--   Syntax highlighting is only needed for posts-->
   
-  <link rel="stylesheet" href="//css/syntax-highlighter.css">
+  <link rel="stylesheet" href="/css/syntax-highlighter.css">
   
   <link href="//fonts.googleapis.com/css?family=Space+Mono|Work+Sans:700" rel="stylesheet">
-  <style media="screen">
-    .links .on:hover{
-      cursor:pointer;
-    }
-    .hideUl{
-      display: none;
+  
 
-    }
-    .hideUl li {
-      font-size: 1.5em;
-    }
-
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-
-<input type="checkbox" id="hamburger" name="hamburger">
-<label id="label-ham" for="hamburger"></label>
-<div class="menu-container" style="display:block;">
-  <div class="menu"></div>
-  <!-- <p>node.js</p> -->
-  <!--  site의 전역변수화-->
-  <div class="links">
-      <a href="//"><i class="fa fa-home"></i>&nbsp;Home</a>
-      <a href="//about/"><i class="fa fa-user"></i>&nbsp;About</a>
-      <a class="on" href="//archive/"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</a>
-        <ul class='hideUl'>
-          <li><a class="on" href="//node.js/"><i class="fa fa-file-zip-o"></i>&nbsp;node.js</a></li>
-          <li><a class="on" href="//java/"><i class="fa fa-file-zip-o"></i>&nbsp;java</a></li>
-          <li><a class="on" href="//Spring/"><i class="fa fa-file-zip-o"></i>&nbsp;Spring</a></li>
-          <li><a class="on" href="//javascript/"><i class="fa fa-file-zip-o"></i>&nbsp;javascript</a></li>
-          <li><a class="on" href="//html,css/"><i class="fa fa-file-zip-o"></i>&nbsp;html,css</a></li>
-        </ul>
-      <!--  -->
-      <!-- <a href="//contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a> -->
-      <a href="https://github.com/SinYongJu/SinYongJu.github.io"><i class="fa fa-code-fork"></i>&nbsp;Project</a>
-  </div>
+<ul class="gnb_main_top">
+	<li><a href="/about/"><span class="fa fa-bars" aria-hidden="true"></span></a></li>
+	<li><a href="/"><span class="fa fa-home" aria-hidden="true"></span>Home</a></li>
+	<li><a><span class="fa fa-user" aria-hidden="true"></span>Me?!</a></li>
+</ul>
+<div id="header">
+	<a href="/">
+		<h6 class="site-title">Siba를 닮은 '나', DevDoggy</h6>
+	</a>
 </div>
+<!--17/12/18 수정 기획안 -->
+<ul class="nav_side">
+	<li class="screen_out">아직 리뉴얼 작업중입니다 ㅋㅋ 양해좀 구할게요 위에 버튼도 막 안되고 걍 보기?! 그것도 퀄 겁나 낮아요 시간이 없네요 </li>
+	<!--<li>js</li>-->
+	<!--<li>java</li>-->
+	<!--<li>html+css</li>-->
+	<!--<li>web</li>-->
+</ul>
+<div class="container">
 
-<div class="content">
-<header>
-     <a href="//"><h1 class="site-title">Siba를 닮은 '나', DevDoggy</h1></a>
-</header>
-  <div class="post-title">
-    
-    <div class="title" style="color:#620d1b;">
-        <h2>Contact</h2>
+<ul class="wrap_list">
+	<div class="post_title">
+    <div class="wrap_thumb">
+        
+        <div class=_ico></div>
+        
+    </div>
+    <div class="tit_post" style="color:#620d1b;">
+        <strong>Contact</strong>
         <!-- <span>/contact/</span> -->
-        <span>
+        <p>
             <time datetime="">
                    
             </time>
-        </span>
+        </p>
         <span>
           
         </span>
@@ -71,8 +60,8 @@
     </div>
 </div>
 
-
-<section id="contact">
+<div class="container_post">
+    <section id="contact">
 
 </section>
 <p>Insert a form or contact details here.</p>
@@ -91,6 +80,19 @@
 }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="fb-page" data-href="https://www.facebook.com/webjeda/" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/webjeda/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/webjeda/">WebJeda</a></blockquote></div>
+
+
+</div>
+
+
+
+
+<script>
+    (function(){
+
+    })();
+</script>
+</ul>
 
 
   
@@ -134,28 +136,13 @@ s.setAttribute('data-timestamp', +new Date());
   ga('send', 'pageview');
 
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    // console.log('호우')
-    // $('.on').on('mouseenter',function(e){
-    //     console.log('this','요기!')
-    //     $('.hideUl').css('display','block');
-    //     e.preventDefault()
-    //
-    //
-    // })
-    //
-    // $('.on').on('mouseleave',function(e){
-    //     console.log('this','요기!')
-    //     $('.hideUl').css('display','none');
-    //     e.preventDefault()
-    //
-    //
-    // })
-  })()
-</script>
 
-
+<div class="btn_top">
+  <a href="#">
+    <span class="screen_out">맨위로</span>
+    <span><i class="fa fa-arrow-up" aria-hidden="true"></i>top</span>
+  </a>
+</div>
+<script src="/js/parrellex_scroll.js"></script>
 </body>
 </html>

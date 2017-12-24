@@ -5,65 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Archive -  -->
   <title>Siba를 닮은 '나', DevDoggy</title>
-  <link rel="stylesheet" href="//css/main.css">
-  <!--   Syntax highlighting is only needed for posts -->
+  <!--<link rel="stylesheet" href="//css/main.css">-->
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <!--   Syntax highlighting is only needed for posts-->
   
-  <link rel="stylesheet" href="//css/syntax-highlighter.css">
+  <link rel="stylesheet" href="/css/syntax-highlighter.css">
   
   <link href="//fonts.googleapis.com/css?family=Space+Mono|Work+Sans:700" rel="stylesheet">
-  <style media="screen">
-    .links .on:hover{
-      cursor:pointer;
-    }
-    .hideUl{
-      display: none;
+  
 
-    }
-    .hideUl li {
-      font-size: 1.5em;
-    }
-
-  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-
-<input type="checkbox" id="hamburger" name="hamburger">
-<label id="label-ham" for="hamburger"></label>
-<div class="menu-container" style="display:block;">
-  <div class="menu"></div>
-  <!-- <p>node.js</p> -->
-  <!--  site의 전역변수화-->
-  <div class="links">
-      <a href="//"><i class="fa fa-home"></i>&nbsp;Home</a>
-      <a href="//about/"><i class="fa fa-user"></i>&nbsp;About</a>
-      <a class="on" href="//archive/"><i class="fa fa-file-zip-o"></i>&nbsp;Archive</a>
-        <ul class='hideUl'>
-          <li><a class="on" href="//node.js/"><i class="fa fa-file-zip-o"></i>&nbsp;node.js</a></li>
-          <li><a class="on" href="//java/"><i class="fa fa-file-zip-o"></i>&nbsp;java</a></li>
-          <li><a class="on" href="//Spring/"><i class="fa fa-file-zip-o"></i>&nbsp;Spring</a></li>
-          <li><a class="on" href="//javascript/"><i class="fa fa-file-zip-o"></i>&nbsp;javascript</a></li>
-          <li><a class="on" href="//html,css/"><i class="fa fa-file-zip-o"></i>&nbsp;html,css</a></li>
-        </ul>
-      <!--  -->
-      <!-- <a href="//contact/"><i class="fa fa-address-book-o"></i>&nbsp;Contact</a> -->
-      <a href="https://github.com/SinYongJu/SinYongJu.github.io"><i class="fa fa-code-fork"></i>&nbsp;Project</a>
-  </div>
+<ul class="gnb_main_top">
+	<li><a href="/about/"><span class="fa fa-bars" aria-hidden="true"></span></a></li>
+	<li><a href="/"><span class="fa fa-home" aria-hidden="true"></span>Home</a></li>
+	<li><a><span class="fa fa-user" aria-hidden="true"></span>Me?!</a></li>
+</ul>
+<div id="header">
+	<a href="/">
+		<h6 class="site-title">Siba를 닮은 '나', DevDoggy</h6>
+	</a>
 </div>
+<!--17/12/18 수정 기획안 -->
+<ul class="nav_side">
+	<li class="screen_out">아직 리뉴얼 작업중입니다 ㅋㅋ 양해좀 구할게요 위에 버튼도 막 안되고 걍 보기?! 그것도 퀄 겁나 낮아요 시간이 없네요 </li>
+	<!--<li>js</li>-->
+	<!--<li>java</li>-->
+	<!--<li>html+css</li>-->
+	<!--<li>web</li>-->
+</ul>
+<div class="container">
 
-<div class="content">
-<header>
-     <a href="//"><h1 class="site-title">Siba를 닮은 '나', DevDoggy</h1></a>
-</header>
-  <div class="post-title">
-    
-    <div class="title" style="color:#620d1b;">
-        <h2>Archive</h2>
+<ul class="wrap_list">
+	<div class="post_title">
+    <div class="wrap_thumb">
+        
+        <div class=_ico></div>
+        
+    </div>
+    <div class="tit_post" style="color:#620d1b;">
+        <strong>Archive</strong>
         <!-- <span>/archive/</span> -->
-        <span>
+        <p>
             <time datetime="">
                    
             </time>
-        </span>
+        </p>
         <span>
           
         </span>
@@ -71,128 +60,232 @@
     </div>
 </div>
 
-
-<section id="archive">
+<div class="container_post">
+    <section id="archive">
 <h2><i class="fa fa-file-archive-o"></i>&nbsp;Articles from this year</h2>
 
-  
 
+  
   <ul class="this">
   
- <li class="arch-list"><a href="//2017/10/16/%EC%83%88%EB%B2%BD-%EC%A7%80%ED%82%AC-%EC%98%A4%EB%A5%98-%EC%9E%A1%EC%9D%8C.html">지킬 오류를 잡았다!</a>&nbsp;<time>16 Oct</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/12/17/%EB%A6%AC%EB%89%B4%EC%96%BC-%EA%B3%84%ED%9A%8D%EC%95%88-header-2017.12.17.html">리뉴얼 계획안 header 2017/12/17</a>&nbsp;<time>17 Dec</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/10/16/%EB%B9%8C%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C.html">빌드 프로그램 넌 누구!?</a>&nbsp;<time>16 Oct</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/12/16/%ED%95%98%EC%BD%94%EC%82%AC-%EC%84%B8%EB%AF%B8%EB%82%98-%ED%94%84%EB%A1%A0%ED%8A%B8-%EC%97%94%EB%93%9C-%EA%B0%9C%EB%B0%9C%EC%9E%90%EA%B0%80-%EB%90%98%EB%8A%94-%EB%B2%95.html">프론트 앤드 개발자가 되는 법 for 퍼블리셔 by 빼로</a>&nbsp;<time>16 Dec</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/10/16/front-end-%EA%B3%B5%EB%B6%80-%EB%B0%A9%ED%96%A5%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C...%EB%98%90%EB%A5%B5.html">front-end 공부 방향에 대해서</a>&nbsp;<time>16 Oct</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/12/16/%ED%95%98%EC%BD%94%EC%82%AC-%EC%84%B8%EB%AF%B8%EB%82%98-%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%A7%81-%EB%84%8C-%EB%88%84%EA%B5%AC!.html">하코사 세미나_ 웹 크롤링 넌 누구!? by 크로스핏</a>&nbsp;<time>16 Dec</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/10/13/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC.html">오늘의 용어 정리</a>&nbsp;<time>13 Oct</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/12/16/%ED%95%98%EC%BD%94%EC%82%AC-%EC%84%B8%EB%AF%B8%EB%82%98-sass_%EC%9D%91%EC%9A%A9%EA%B3%BC-%ED%99%9C%EC%9A%A9.html">하코사 세미나-sass_응용과 활용(신입 인턴) by 황선수님</a>&nbsp;<time>16 Dec</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/10/07/Spring%EC%9D%98framework3.html">Spring framework 3</a>&nbsp;<time>07 Oct</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/12/16/%ED%95%98%EC%BD%94%EC%82%AC-%EC%84%B8%EB%AF%B8%EB%82%98-how-to-Ai.html">하코사 세미나_ how to understand Ai</a>&nbsp;<time>16 Dec</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/10/07/Spring%EC%9D%98framework2.html">Spring framework 2</a>&nbsp;<time>07 Oct</time></li>
-
+ <li class="arch-list" data-cate="javascripthtmlcss"><a href="//javascript/html/css/2017/12/10/slider.html">slider posting!</a>&nbsp;<time>10 Dec</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/10/07/Spring%EC%9D%98framework1.html">Spring framework 1</a>&nbsp;<time>07 Oct</time></li>
-
+ <li class="arch-list" data-cate="javascripthtmlcss"><a href="//javascript/html/css/2017/10/29/form-%EC%9C%A0%ED%9A%A8%EC%84%B1-%EA%B2%80%EC%82%AC.html">form 유효성 검사!</a>&nbsp;<time>29 Oct</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/10/01/node.js%EC%97%90%EC%84%9C-express-frame%EC%9B%8C%ED%81%AC%EC%9D%98-%EC%82%AC%EC%9A%A9.html">node.js에서 express framework를 사용하면서</a>&nbsp;<time>01 Oct</time></li>
-
+ <li class="arch-list" data-cate="java"><a href="//java/2017/10/26/%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%EB%8F%99%EC%9E%91%EC%9B%90%EB%A6%AC.html">브라우저 동작원리!</a>&nbsp;<time>26 Oct</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/09/27/php%EB%A5%BC-%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C-1.html">php를 공부하면서 1(추후 수정)</a>&nbsp;<time>27 Sep</time></li>
-
+ <li class="arch-list" data-cate="java"><a href="//java/2017/10/25/JSP%EC%99%80-%ED%95%98%EC%9D%B4%EB%B8%8C%EB%A6%AC%EB%93%9C-%EC%95%B1.html">JSP와 하이브리드 앱!</a>&nbsp;<time>25 Oct</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/09/25/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC.html">오늘의 용어 정리</a>&nbsp;<time>25 Sep</time></li>
-
+ <li class="arch-list" data-cate="javascript"><a href="//javascript/2017/10/21/prototype%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC.html">prototype에 대하여!</a>&nbsp;<time>21 Oct</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/09/25/oop.html">oop</a>&nbsp;<time>25 Sep</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/10/19/%EC%98%A4%EB%8A%98-%EC%83%9D%EA%B0%81%EB%82%9C-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4%EB%93%A4.html">오늘 생각난 아이디어들</a>&nbsp;<time>19 Oct</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/09/25/null-%EA%B3%BC-undefined.html">null과 undefined</a>&nbsp;<time>25 Sep</time></li>
-
+ <li class="arch-list" data-cate="javascript"><a href="//javascript/2017/10/19/%EC%97%AD%EC%8B%9C-JavaScript-%EC%83%9D%EA%B0%81%EB%82%9C-%EA%B9%80%EC%97%90-posting(%EB%B3%80%EC%88%98-%EC%84%A0%EC%96%B8!!!!!-%EB%9A%9C%EB%91%94!!).html">JavaScript 생각난 김에 변수 선언에 관한 포스팅!</a>&nbsp;<time>19 Oct</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/09/24/RESTful%EC%9D%B4%EB%9E%80.html">RESTful이란</a>&nbsp;<time>24 Sep</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/10/18/template-engine%EC%97%90-%EB%8C%80%ED%95%98%EC%97%AC.html">template engine에 대해서</a>&nbsp;<time>18 Oct</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2017/09/23/Jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%98%EB%A9%B0.html">jekyll 블로그를 시작하며, 아주 간단하게(추후 수정)</a>&nbsp;<time>23 Sep</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/10/16/%EC%83%88%EB%B2%BD-%EC%A7%80%ED%82%AC-%EC%98%A4%EB%A5%98-%EC%9E%A1%EC%9D%8C.html">지킬 오류를 잡았다!</a>&nbsp;<time>16 Oct</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/10/16/%EB%B9%8C%EB%93%9C-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C.html">빌드 프로그램 넌 누구!?</a>&nbsp;<time>16 Oct</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="javascripthtmlcss"><a href="//javascript/html/css/2017/10/16/front-end-%EA%B3%B5%EB%B6%80-%EB%B0%A9%ED%96%A5%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C...%EB%98%90%EB%A5%B5.html">front-end 공부 방향에 대해서</a>&nbsp;<time>16 Oct</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/10/13/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC.html">오늘의 용어 정리</a>&nbsp;<time>13 Oct</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="javaspring"><a href="//java/spring/2017/10/07/Spring%EC%9D%98framework3.html">Spring framework 3</a>&nbsp;<time>07 Oct</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="javaspring"><a href="//java/spring/2017/10/07/Spring%EC%9D%98framework2.html">Spring framework 2</a>&nbsp;<time>07 Oct</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="javaspring"><a href="//java/spring/2017/10/07/Spring%EC%9D%98framework1.html">Spring framework 1</a>&nbsp;<time>07 Oct</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="node"><a href="//node/2017/10/01/node.js%EC%97%90%EC%84%9C-express-frame%EC%9B%8C%ED%81%AC%EC%9D%98-%EC%82%AC%EC%9A%A9.html">node.js에서 express framework를 사용하면서</a>&nbsp;<time>01 Oct</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="php"><a href="//php/2017/09/27/php%EB%A5%BC-%EA%B3%B5%EB%B6%80%ED%95%98%EB%A9%B4%EC%84%9C-1.html">php를 공부하면서 1(추후 수정)</a>&nbsp;<time>27 Sep</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/09/25/%EC%9A%A9%EC%96%B4%EC%A0%95%EB%A6%AC.html">오늘의 용어 정리</a>&nbsp;<time>25 Sep</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/09/25/oop.html">oop</a>&nbsp;<time>25 Sep</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="javascript"><a href="//javascript/2017/09/25/null-%EA%B3%BC-undefined.html">null과 undefined</a>&nbsp;<time>25 Sep</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/09/24/RESTful%EC%9D%B4%EB%9E%80.html">RESTful이란</a>&nbsp;<time>24 Sep</time></li>
+ 
+  
+  
+  
+  
+  
+ <li class="arch-list" data-cate="programing"><a href="//programing/2017/09/23/Jekyll-%EB%B8%94%EB%A1%9C%EA%B7%B8%EB%A5%BC-%EC%8B%9C%EC%9E%91%ED%95%98%EB%A9%B0.html">jekyll 블로그를 시작하며, 아주 간단하게(추후 수정)</a>&nbsp;<time>23 Sep</time></li>
+ 
   
   
   
   
   </ul>
   <h2>2016</h2>
-
   <ul class="past">
   
   
- <li class="arch-list"><a href="//2016/09/25/%ED%95%B4%EC%95%BC%ED%95%A0-%EA%B2%83%EB%93%A4.html">해야할 것들!</a>&nbsp;<time>25 Sep</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2016/09/25/%ED%95%B4%EC%95%BC%ED%95%A0-%EA%B2%83%EB%93%A4.html">해야할 것들!</a>&nbsp;<time>25 Sep</time></li>
+ 
   
   
   
   
   
- <li class="arch-list"><a href="//2016/05/07/example.html">Example Post</a>&nbsp;<time>07 May</time></li>
-
+ <li class="arch-list" data-cate="programing"><a href="//programing/2016/05/07/example.html">Example Post</a>&nbsp;<time>07 May</time></li>
+ 
   </ul>
+
 </section>
+
+
+</div>
+
+
+
+
+<script>
+    (function(){
+
+    })();
+</script>
+</ul>
 
 
   
@@ -236,28 +329,13 @@ s.setAttribute('data-timestamp', +new Date());
   ga('send', 'pageview');
 
 </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    // console.log('호우')
-    // $('.on').on('mouseenter',function(e){
-    //     console.log('this','요기!')
-    //     $('.hideUl').css('display','block');
-    //     e.preventDefault()
-    //
-    //
-    // })
-    //
-    // $('.on').on('mouseleave',function(e){
-    //     console.log('this','요기!')
-    //     $('.hideUl').css('display','none');
-    //     e.preventDefault()
-    //
-    //
-    // })
-  })()
-</script>
 
-
+<div class="btn_top">
+  <a href="#">
+    <span class="screen_out">맨위로</span>
+    <span><i class="fa fa-arrow-up" aria-hidden="true"></i>top</span>
+  </a>
+</div>
+<script src="/js/parrellex_scroll.js"></script>
 </body>
 </html>

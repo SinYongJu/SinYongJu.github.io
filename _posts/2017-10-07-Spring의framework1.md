@@ -2,7 +2,7 @@
 layout: post
 title:  "Spring framework 1"
 icon:  heart-o
-category: Spring
+category : [java,spring]
 ---
 
 프레임워크란

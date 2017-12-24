@@ -4,28 +4,41 @@ comment: true
 ---
 
 
-<div class="post-title">
-    {% if page.icon %}
-    <div class="logo" style="color:#620d1b;">
-
-            <i class="fa fa-{{page.icon}}"></i>
-
+<div class="post_title">
+    <div class="wrap_thumb">
+        {% if page.category[1] == 'html'%}
+        <div class={{page.category[1]}}_ico></div>
+        {%else if page.category[0]%}
+        <div class={{page.category[0]}}_ico></div>
+        {%else%}
+        <div class='programing_ico'></div>
+        {% endif %}
     </div>
-    {% endif %}
-    <div class="title" style="color:#620d1b;">
-        <h2>{{page.title}}</h2>
+    <div class="tit_post" style="color:#620d1b;">
+        <strong>{{page.title}}</strong>
         <!-- <span>{{page.url}}</span> -->
-        <span>
+        <p>
             <time datetime="">
                    {{ page.date | date: '%B %d, %Y' }}
             </time>
-        </span>
+        </p>
         <span>
-          {{page.category}}
+          {{page.category | truncate: 90}}
         </span>
 
     </div>
 </div>
 
+<div class="container_post">
+    {{content}}
 
-{{content}}
+</div>
+
+
+
+
+<script>
+    (function(){
+
+    })();
+</script>

@@ -2,31 +2,38 @@
 title: Welcome
 layout: default
 ---
-
+<!--<div class="wrap_tit">-->
+<!--<a href="{{site.baseurl}}{{post.url}}"><span class="tit_cont">{{post.title}}</span></a>-->
+<!--</div>-->
 
 {% for post in site.posts %}
-<div class="list">
+<li class="list">
 <div class="post-index">
-    <div class="post-image">
-        <a href="{{post.url}}">
-
-              <i class="fa fa-{{post.icon}} fa-fw"></i>
-
-        </a>
-    </div>
-    <div class="post-content">
-        <p class="post-index-title"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></p>
-        <p>
-
-                <span class="excerpt">{{ post.content | strip_html | strip_newlines | truncate: 90 }}</span>
-
-        </p>
-        <p class="post-detail">{{ post.date | date: '%B %d, %Y' }}
+         <a href="{{post.url}}">
+             <div class="wrap_thumb">
+                 {% if post.category[1] == 'html'%}
+                    <div class={{post.category[1]}}_ico></div>
+                 {%else if post.category[0]%}
+                    <div class={{post.category[0]}}_ico></div>
+                 {%else%}
+                    <div class='programing_ico'></div>
+                 {% endif %}
+             </div>
+             <div class="wrap_tit">
+                 <span class="tit_cont">{{post.title}}</span>
+             </div>
+         </a>
+         <div class="wrap_info">
+             <a href="{{post.url}}">
+                 <p>{{post.category | truncate: 90}}</p>
+                 <span class="desc_cont">{{ post.content | strip_html | strip_newlines | truncate: 90 }}</span>
+             </a>
+        </div>
+        <div class="info_cont">{{ post.date | date: '%B %d, %Y' }}
              <a href="{{site.baseurl}}{{post.url}}/index.html#disqus_thread" data-disqus-identifier="{{post.url}}"></a>
-        </p>
-    </div>
+        </div>
 </div>
-</div>
+</li>
 <script>
 
 </script>
